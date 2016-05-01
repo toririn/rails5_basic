@@ -1,0 +1,54 @@
+<nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container-fluid" style="background-color: #000;">
+
+    <% # スマートフォンサイズで表示されるメニューボタンとテキスト %>
+    <div class="navbar-header">
+
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-menu-4">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <% # タイトルなどのテキスト %>
+      <%= link_to("トップ画面", tops_path, { class: "navbar-brand" }) %>
+
+    </div>
+
+    <% #グローバルナビの中身 %>
+    <div class="collapse navbar-collapse" id="nav-menu-4">
+
+      <% # 各ナビゲーションメニュー %>
+      <ul class="nav navbar-nav">
+        <% # 通常のリンク %>
+        <li class="active">
+          <%= link_to("マイページ", tops_path) %>
+        </li>
+        <% # ドロップダウンのメニューも配置可能 %>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <span class="">メニュー１</span><span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li ><%= link_to("メニュー１−１", tops_path) %></li>
+            <li><%= link_to("メニュー１−２", tops_path) %></li>
+          </ul>
+        </li>
+        <% # ドロップダウンのメニューも配置可能 %>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <span class="">メニュー２</span><span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><%= link_to("メニュー２−１", tops_path) %></li>
+            <li><%= link_to("メニュー２−２", tops_path) %></li>
+          </ul>
+        </li>
+        <li>
+          <%= link_to("メニュー３", tops_path) %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
